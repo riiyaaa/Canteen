@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat With Mummy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style_mum.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<body>
+
+	<div class="area">
+		<ul class="circles">
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		</ul>
+	  </div>
+	<div class="container">
+		<h1>Hi! Chat With Mummy!</h1>
+    </div>
+	
+	<h3>Done Chatting? Head back to <i id="home_icon" class="fa fa-home" area-hidden="true"><a style="text-decoration: none;" id="HomeIcon" href="/index.html"> Home</a></i></h3>
+	<!-- <div class="home_icon">
+		<i class="fa fa-home" area-hidden="true"><a style="text-decoration: none;" id="HomeIcon" href="/index.html"> Home</a></i>
+	</div> -->
+<!-- ChatBot -->
+<div class="chat_icon">
+	<!-- <i class="fa fa-comments" aria-hidden="true"></i> -->
+	<img id="mumbot" src="./images/1550951173.svg"><br>
+	<figcaption>Talk to me</figcaption>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+	  <input type="text" name="name" data-conv-question="Hello! Please, Enter your name.">
+
+	  <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+
+      <select data-conv-question="How are you feeling today?" name="category">
+        <option value="not okay">Not okay😕</option>
+        <option value="okay">Okay🙂</option>
+		<option value="great">Great😁</option>
+      </select>
+
+
+	  <div data-conv-fork="category">
+        <div data-conv-case="not okay">
+	  	<select data-conv-question="You can do one of these. You'll feel good." name="category">
+        	<option value="movie">Watch a movie.</option>
+        	<option value="eat">Eat something.</option>
+			<option value="talk">Talk to a friend.</option>
+			<option value="not interested">Not interested</option>
+      	</select>
+	  <div data-conv-fork="category">
+		<div data-conv-case="movie">
+		<select data-conv-question="Here are some recommendations: <br> 1. Forrest Gump <br> 2. 3 Idiots <br> 3. Chupke Chupke <br> 4. Harry Potter <br> 5. Mr. Bean <br> Hope you feel better. Bye." name="category">
+		</select>
+	  <div data-conv-fork="category">
+		<div data-conv-case="eat">
+		<select data-conv-question="Here are some comforting foods: <br> 1. Maggie <br> 2. Chocolates <br> 3. Dosa <br> 4. Ice-cream <br> 5. Fruits <br> Hope you feel better. Bye." name="category">
+		</select>
+	  <div data-conv-fork="category">
+		<div data-conv-case="talk">
+		<select data-conv-question="Hope you'll feel better." name="category">
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="not interested">
+		<select data-conv-question="Take a refreshing nap. Bye." name="category">
+		</select>
+
+
+	<div data-conv-fork="category">
+		<div data-conv-case="okay">
+		<select data-conv-question="Good to hear that. Would you like to hear a joke?" name="category">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="yes">
+		<select data-conv-question="What do you call a crying sister? A cry-sis.<br>Like it?" name="category">
+			<option value="ya">Yes</option>
+			<option value="na">No</option>
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="ya">
+		<select data-conv-question="Ab jao, khana khao." name="category">
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="na">
+		<select data-conv-question="Koi na, so jao." name="category">
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="no">
+		<select data-conv-question="Thik hai khana kha lena🤦‍♀️" name="category">
+		</select>
+
+
+	<div data-conv-fork="category">
+		<div data-conv-case="great">
+		<select data-conv-question="Lovely to hear that. Khana kha liya tha?" name="category">
+			<option value="haan">Haan</option>
+			<option value="naa">Naa</option>
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="haan">
+		<select data-conv-question="Badhiya, khush raho hamesha!!" name="category">
+		</select>
+	<div data-conv-fork="category">
+		<div data-conv-case="naa">
+		<select data-conv-question="Jao fir khana khao." name="category">
+		</select>
+      </div>
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+<script type="text/javascript">
+	portfolioList = document.querySelectorAll('.portfolio-box');
+	portfolioList.forEach(function(portfolioPic) {
+		portfolioPic.addEventListener('click',function(){
+			bg = this.style.backgroundImage;
+			document.getElementById('port_pop_pic_bg').classList.add("active")
+			document.getElementById('port_pop_pic').style.backgroundImage = bg
+			document.getElementById('port_pop_pic').classList.add("active")
+		});	
+	})
+	document.getElementById('port_pop_pic_bg').addEventListener('click',function(){
+			document.getElementById('port_pop_pic_bg').classList.remove("active")
+			document.getElementById('port_pop_pic').classList.remove("active")
+	})
+</script>
+
+</body>
+</html>
